@@ -221,7 +221,7 @@ from io import BytesIO
 @login_required
 def correction():
     text = ''
-    prompt = f""" Corriger les erreurs grammtical, de syntaxe.. dans ce texte :isi un tixt en froncais"""
+    prompt = f" Corriger les erreurs grammtical, de syntaxe.. dans ce texte :{text}"
 
 
     if request.method == 'POST':
