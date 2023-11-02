@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lesoeuvres.css') }}">
+
+    <title>Antigone</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BN5SXVCZ2B');
+    </script>
+
+</head>
+<body>
+    <!-- the menue -->
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <ul id="menu">
+            <a href="{{ url_for('lesoeuvres') }}"><li>Home</li></a>
+            <a href="{{ url_for('login') }}"><li>Logout</li></a>
+        </div>
+    </nav>
+    <h1>Poser vos questions</h1>
+    <form action="/lesoeuvres/antigone" method="post">
+        <label for="user_message">Votre question : </label>
+        <textarea id="user_message" name="user_message" required></textarea>
+        <br><br>
+        <input type="submit" value="Chat">
+    </form>
+    <br>
+    {% if chat_response %}
+    <h2>Response:</h2>
+    <p>{{ chat_response }}</p>
+    {% endif %}
+</body>
+</html>

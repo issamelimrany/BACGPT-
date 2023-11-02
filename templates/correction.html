@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='correction.css') }}">
+
+    <title>Correction</title>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN5SXVCZ2B');
+</script>
+
+</head>
+<body>
+    <!-- the menue -->
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <ul id="menu">
+            <a href="{{ url_for('choose') }}"><li>Home</li></a>
+            <a href="{{ url_for('login') }}"><li>Logout</li></a>
+        </div>
+    </nav>
+    <h2>Correction</h2>
+    
+    <form action="/correction" method="post" enctype="multipart/form-data">
+        <textarea name="text" rows="5" placeholder="Enter your text here..."></textarea>
+        <!--<h3 style="text-align: center;">Or</h3>
+        <input type="file" name="file"> -->
+        <button type="submit">Submit</button> 
+    </form>
+
+    <div class="result">
+        {% if original %}
+        <h3>Texte original :</h3>
+        <p>{{ original }}</p>
+        {% endif %}
+        <br>
+        {% if corrected %}
+        <h3>La version corrigée :</h3>
+        <p>{{ corrected }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

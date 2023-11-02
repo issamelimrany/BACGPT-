@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lesoeuvres.css') }}">
+
+    <title>Les Oeuvres</title>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN5SXVCZ2B');
+</script>
+
+</head>
+<body>
+    <!-- the menue -->
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <ul id="menu">
+            <a href="{{ url_for('choose') }}"><li>Home</li></a>
+            <a href="{{ url_for('login') }}"><li>Logout</li></a>
+        </div>
+    </nav>
+    <header>
+        <h2>Les Oeuvres</h2>
+    </header>
+    <div class="section" id="antigone">
+        <a href="/lesoeuvres/antigone">Antigone</a>
+    </div>
+    <div class="section" id="boite">
+        <a href="/lesoeuvres/condamne">Le dernier jour d'un condamné</a>
+    </div>
+    <div class="section" id="condamne">
+        <a href="/lesoeuvres/boite">la boîte à merveilles</a>
+    </div>
+</body>
+</html>
+ 

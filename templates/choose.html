@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>BacGpt</title>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN5SXVCZ2B');
+</script>
+
+</head>
+<body>
+    <header>
+        <h2>BacGpt</h2>
+    </header>
+    <div class="section" id="generation">
+        <center><a href="/generation">Génération</a></center>
+    </div>
+    <div class="section" id="correction">
+        <center><a href="/correction">Correction</a></center>
+    </div>
+    <div class="section" id="lesoeuvres">
+        <center><a href="/lesoeuvres">Les Oeuvres</a></center>
+    </div>
+    <div id = "logout">
+        <a href="{{url_for('logout')}}">logout</a>
+    </div>
+</body>
+</html>
+ 

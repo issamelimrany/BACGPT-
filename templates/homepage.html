@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BacGpt</title>
+    <meta name="description" content="BacGpt">
+<link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN5SXVCZ2B');
+</script>
+
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="jumbotron jumbotron-fluid" id="banner">
+        <div class="container text-center text-md-left">
+            <header>
+                <div class="row justify-content-between">
+                    <div class="col-2">
+                        <img src="{{url_for('static', filename = 'img/logonobk.png')}}" alt="logo">
+                    </div>
+                    <div class="col-6 align-self-center text-right">
+                        <a href="{{url_for('login')}}" class="text-white lead">connexion</a>
+                    </div>
+                </div>
+            </header>
+            
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
+            	la preparation<br>
+            	est plus simple !
+            </h1>
+            <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+                Ces trois outils qui utilisent l'IA vont rendre votre preparation plus fluide
+                
+            </p>
+            <a href="{{url_for('register')}}" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-green">s'inscrire</a>
+        </div>
+    </div>
+    <!-- three-blcok -->
+    <div class="container my-5 py-2">
+        <h2 class="text-center font-weight-bold my-5">3 outils pour préparer vos examens de français !</h2>
+        <br>
+        <div class="row">
+            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{{url_for('static', filename = 'img/generation.jpg')}}" alt="generation" class ="mx-auto" >
+                <br>
+                <h4>Génération</h4>
+                <p>Permet de générer une production écrite correspondant à un tel sujet</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img  src="{{url_for('static', filename = 'img/correction.png')}}" alt="correction" class ="mx-auto" >
+                <br>
+                <h4>Correction</h4>
+                <p>Permet de corriger votre production écrite</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center">
+                <img src="{{url_for('static', filename = 'img/lesoeuvres.png')}}" alt="lesoeuvres" class ="mx-auto">
+                <br>
+                <h4>les oeuvres</h4>
+                <p>Vous permet d'interagir avec les œuvres ! Toutes vos questions auront une réponse.</p>
+            </div>
+        </div>
+    </div>
+    <!-- feature (skew background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-first">
+        <div class="container my-5">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+                    <h2 class="font-weight-bold">Safe and reliable</h2>
+                    <p class="my-4">
+                        We use the latest security measures and the most reliable frameworks
+                        <br> to guarantee the best experience for you 
+                    </p>
+                    <a href="{{url_for('register')}}" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center">
+                    <img src="{{url_for('static', filename = 'img/feature1.png')}}" alt="take a look inside" class ="mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- feature (green background) -->
+    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+        <div class="container">
+            <div class="row justify-content-between text-center text-md-left">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+                    <h2 class="font-weight-bold"> ألق نظرة الأن </h2>
+                    <p class="my-4">يمكنك طرح الأسئلة بأي لغة من اختيارك، و الأجوبة تكون باللغة الأصلية للمادة </p>
+                
+                    <a href="{{url_for('register')}}" class="btn my-4 font-weight-bold atlas-cta cta-blue">إكتشف أكثر </a>
+                </div>
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <div class="container my-5 py-2" id="price-table">
+        <h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
+        <div class="row">
+            <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">STARTUP</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Up to 5 generations</li>
+                    <li>Up to 5 corrections</li>
+                    <li>Up to 10 questions about the novels</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+                <h4 class="my-4">PREMIUM</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">5</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Up to 50 generations</li>
+                    <li>Up to 50 corrections</li>
+                    <li>Up to 100 questions about the novels</li>
+                    <li>Limited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get now</a>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+                <h4 class="my-4">PROFESSIONAL</h4>
+                <p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
+                <ul class="list-unstyled">
+                    <li>Up to 100 generations</li>
+                    <li>Up to 100 corrections</li>
+                    <li>Up to 200 questions about the novels</li>
+                    <li>Unlimited Support</li>
+                </ul>
+                <a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get now</a>
+            </div>
+        </div>
+    </div> 
+    price table -->
+    
+    <!-- contact -->
+    <div class="jumbotron jumbotron-fluid" id="banner" >        
+        <div class="container my-5">
+            <div class="row justify-content-between">
+                <div class="col-md-6 text-white">
+                    <h2 class="font-weight-bold">Contact Us</h2>
+                    <p class="my-4">
+                        for any additional information and requests,<br>
+                        you can contact us via this form.
+                         
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                    	<div class="row">
+	                        <div class="form-group col-md-6">
+	                            <label for="name" style="color: white;">Your Name</label>
+	                            <input type="name" class="form-control" id="name">
+	                        </div>
+	                        <div class="form-group col-md-6">
+	                            <label for="Email" style="color: white;">Your Email</label>
+	                            <input type="email" class="form-control" id="Email">
+	                        </div>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="message" style="color: white;">Message</label>
+	                        <textarea class="form-control" id="message" rows="3"></textarea>
+	                    </div>
+                        <button type="submit" class="btn font-weight-bold atlas-cta atlas-cta-wide cta-green my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- copyright -->
+	<div class="jumbotron jumbotron-fluid" id="copyright">
+        <div class="container">
+            <div class="row justify-content-between">
+            	<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+                    Copyright © 2023 BacGpt
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AOS -->
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script>
+      AOS.init({
+      });
+    </script>
+</body>
+
+</html>

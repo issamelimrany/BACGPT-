@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='img/icon.png') }}" sizes="32x32" type="image/x-icon" >
+
+    <!-- ... other metadata ... -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='generation.css') }}">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BN5SXVCZ2B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BN5SXVCZ2B');
+</script>
+
+</head>
+<body>
+    <!-- the menue -->
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <ul id="menu">
+            <a href="{{ url_for('choose') }}"><li>Home</li></a>
+            <a href="{{ url_for('login') }}"><li>Logout</li></a>
+        </div>
+    </nav>
+
+
+    <h1>Génération</h1>
+    
+    <form action="/generation" method="post">
+        <textarea name="question" placeholder="Ask your question here..." required oninput="updateCharCount(this);" maxlength="1000"></textarea>
+        <div id="charCount">0/1000</div>
+
+        <button type="submit">générer</button>
+    </form>
+    
+    {% if response %}
+        <div class="response">
+            {{ response }}
+        </div>
+    {% endif %}
+
+    <script>
+        function updateCharCount(textarea) {
+            var charCount = textarea.value.length;
+            var charLimit = 1000; // This should match the maxlength attribute of the textarea
+            document.getElementById("charCount").innerText = charCount + "/" + charLimit;
+        }
+    </script>
+    
+
+</body>
+</html>
