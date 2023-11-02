@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #7d41cb, #430bc5, #00E5FF);
+    background-size: 600% 600%;
+    animation: gradientBG 15s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+header h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    width: 90%;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+}
+
+.section a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.section:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#logout {
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+#logout a {
+    color: #eb0606;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+
+    header h2 {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        width: 50%;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .section a {
+        font-size: 1.4rem;
+    }
+}
+
